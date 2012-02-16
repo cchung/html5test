@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+	<h1>Billing, Security, and Communication Preferences</h1>
+    </header>
+    <div id="main" role="main">
+	<p class="DescriptionUnderPageHeader">Some description goes here</p>
+    
+    <form>
+    <section id="BillingSection" class="light">
+    <header><h2>Billing</h2></header>
+    <div class="content">
+    
+    <div class="inputfield">
+    <p class="FieldLabel">Billing Address</p>
+    <p>
+    Attention: Firstname Lastname<br/>
+    555 5th Ave<br/>
+    Portland, OR<br/>
+    12345<br/>
+    <button id="editAddress" class="small">Edit</button>
+    </p>
+    </div>
+    
+    <div class="inputfield">
+    <p class="FieldLabel">Bill Delivery Method *</p>
+    <p>
+    <input name="billDelivery" id="letter" type="radio" value="letter" checked /><label for="letter"> Letter</label><br/>
+    <input name="billDelivery" id="eBill" type="radio" value="eBill" /><label for="eBill"> eBill</label><br/>
+    </p>
+    </div>
+    
+    </div><!-- .content -->
+    </section>
+    
+    <section id="MarketingPref" class="expandable collapsed light">
+    <header><h2>Marketing Preferences</h2></header>
+    <div class="content">
+    
+    <div class="inputfield">
+    <p class="FieldLabel">Receive Marketing Messages via:</p>
+    <p>
+    <input name="marketingEmail" id="marketingEmail" type="checkbox" value="ReceiveEmail" checked /><label for="marketingEmail"> Email</label><br/>
+    <input name="marketingPhone" id="marketingPhone" type="checkbox" value="ReceivePhone" checked /><label for="marketingPhone"> Phone</label><br/>
+    <input name="marketingSMS" id="marketingSMS" type="checkbox" value="ReceiveSMS" checked /><label for="marketingSMS"> SMS</label><br/>
+    <input name="marketingLetter" id="marketingLetter" type="checkbox" value="ReceiveLetter" checked /><label for="marketingLetter"> Letter</label>    <br/>
+    </p>
+    </div>
+    
+    </div><!-- .content -->
+    </section>
+    
+    <section id="MarketingPref" class="expandable dark">
+    <header><h2>Another Section</h2></header>
+    <div class="content">
+    
+    <div class="inputfield">
+    <p class="FieldLabel">Select some options</p>
+    <p>
+    <input name="marketingEmail" id="marketingEmail" type="checkbox" value="ReceiveEmail" checked /><label for="marketingEmail"> Email</label><br/>
+    <input name="marketingPhone" id="marketingPhone" type="checkbox" value="ReceivePhone" checked /><label for="marketingPhone"> Phone</label><br/>
+    <input name="marketingSMS" id="marketingSMS" type="checkbox" value="ReceiveSMS" checked /><label for="marketingSMS"> SMS</label><br/>
+    <input name="marketingLetter" id="marketingLetter" type="checkbox" value="ReceiveLetter" checked /><label for="marketingLetter"> Letter</label>    <br/>
+    </p>
+    </div>
+    
+    </div><!-- .content -->
+    </section>
+    
+    
+    <div id="optionset">
+   	<p class="FieldLabel">Select Option</p>
+   	<p>
+    <input class="optionset" id="option1" name="options" type="radio" value="Option 1" checked /><label for="option1"> Option 1</label><br/>
+    <input class="optionset" id="option2" name="options" type="radio" value="Option 2" /><label for="option2"> Option 2</label><br/>
+    </p>
+  	</div>
+  
+  	<div id="inputset">
+    
+    <div id="option1Input">
+    <p>
+    <label class="FieldLabel" for="Input1">Option 1 Input</label>
+    <input name="Input1" type="text" size="30" maxlength="30" /><br/>
+    </p>
+    </div>
+    <div id="option2Input">
+    <p>
+    <label class="FieldLabel" for="Input2a">Option 2 Input A</label>
+    <input name="Input2a" type="text" size="30" maxlength="30" /><br/>
+	<label class="FieldLabel" for="Input2b">Option 2 Input B</label>
+    <input name="Input2b" type="text" size="30" maxlength="30" /><br/>
+    </p>
+    </div>
+    
+    </div>
+    </form>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <!-- end scripts-->
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
